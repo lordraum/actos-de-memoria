@@ -1,5 +1,18 @@
 ---
-
+const { images } = Astro.props;
 ---
 
-<section></section>
+<section class="image-gallery">
+  {
+    images.map((image) => (
+      <img src={image.src} alt="imagen del acto de memoria" />
+    ))
+  }
+</section>
+<style>
+  section {
+    img {
+      margin-bottom: 1rem;
+    }
+  }
+</style>

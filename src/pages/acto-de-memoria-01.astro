@@ -1,6 +1,12 @@
 ---
 import Root from "../layouts/Root.astro";
 import MemoryAct from "../components/MemoryAct.astro";
+import ImageGallery from "../components/ImageGallery.astro";
+import image_01 from "../img/acto-de-memoria-01-01.webp";
+import image_02 from "../img/acto-de-memoria-01-02.webp";
+import image_03 from "../img/acto-de-memoria-01-03.webp";
+import image_04 from "../img/acto-de-memoria-01-04.webp";
+const images = [image_01, image_02, image_03, image_04];
 ---
 
 <Root title="Acto de memoria 01">
@@ -17,5 +23,6 @@ import MemoryAct from "../components/MemoryAct.astro";
         </ol>
       </slot>
     </MemoryAct>
+    <ImageGallery images={images} />
   </slot>
 </Root>

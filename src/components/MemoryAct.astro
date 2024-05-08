@@ -3,9 +3,14 @@ const { actName } = Astro.props;
 const { date } = Astro.props;
 ---
 
-<div class="description">
+<article class="description">
   <h1>{actName}</h1>
   <h2>{date}</h2>
   <h2>Descripción:</h2>
   <slot />
-</div>
+</article>
+<style>
+  article {
+    margin-bottom: 2rem;
+  }
+</style>
