@@ -1,5 +1,21 @@
 ---
 import Root from "../layouts/Root.astro";
+import MemoryAct from "../components/MemoryAct.astro";
 ---
 
-<Root title="acto de memoria 02" />
+<Root title="Acto de memoria 01">
+  <slot>
+    <MemoryAct
+      actName="Acto de memoria en conmemoración a las víctimas de desaparición forzada en Colombia."
+      date="8 de Junio de 2018"
+    >
+      <slot>
+        <ol>
+          <li>Performance al ingreso (sensibilización)</li>
+          <li>Taller en el aula (conceptualizacion, cifras, casos)</li>
+          <li>Producto: cartel</li>
+        </ol>
+      </slot>
+    </MemoryAct>
+  </slot>
+</Root>
