@@ -30,6 +30,14 @@ const { title } = Astro.props;
   </body>
 </html>
 
+<style is:global>
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+</style>
+
 <style>
   body {
     display: flex;
@@ -38,10 +46,5 @@ const { title } = Astro.props;
     margin-inline: auto;
     width: 80%;
     min-height: 100vh;
-  }
-
-  h1,
-  h2 {
-    margin-bottom: 2rem;
   }
 </style>
