@@ -1,21 +1,29 @@
 ---
 import Root from "../layouts/Root.astro";
 import MemoryAct from "../components/MemoryAct.astro";
+import ImageGallery from "../components/ImageGallery.astro";
+import image_01 from "../img/acto-de-memoria-06-01.jpg";
+import image_02 from "../img/acto-de-memoria-06-02.jpg";
+import image_03 from "../img/acto-de-memoria-06-03.jpg";
+import image_04 from "../img/acto-de-memoria-06-04.jpg";
+
+const images = [image_01, image_02, image_03, image_04];
 ---
 
-<Root title="Acto de memoria 01">
+<Root title="Acto de memoria 06">
   <slot>
     <MemoryAct
-      actName="Acto de memoria en conmemoración a las víctimas de desaparición forzada en Colombia."
-      date="8 de Junio de 2018"
+      actName="Conversatorio con integrantes de la mesa de participación de Víctimas de Zipaquirá "
+      date="17 de Mayo de 2023"
     >
       <slot>
         <ol>
-          <li>Performance al ingreso (sensibilización)</li>
-          <li>Taller en el aula (conceptualizacion, cifras, casos)</li>
-          <li>Producto: cartel</li>
+          <li>Apertura</li>
+          <li>Historias de vida</li>
+          <li>Relatoría</li>
         </ol>
       </slot>
     </MemoryAct>
+    <ImageGallery images={images} />
   </slot>
 </Root>

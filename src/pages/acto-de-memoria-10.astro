@@ -1,21 +1,26 @@
 ---
 import Root from "../layouts/Root.astro";
 import MemoryAct from "../components/MemoryAct.astro";
+import ImageGallery from "../components/ImageGallery.astro";
+import image_01 from "../img/acto-de-memoria-10-01.jpg";
+import image_02 from "../img/acto-de-memoria-10-02.jpg";
+
+const images = [image_01, image_02];
 ---
 
-<Root title="Acto de memoria 01">
+<Root title="Acto de memoria 10">
   <slot>
     <MemoryAct
-      actName="Acto de memoria en conmemoración a las víctimas de desaparición forzada en Colombia."
-      date="8 de Junio de 2018"
+      actName="Acto de memoria en Conmemoración al día nacional de la memoria y solidaridad con las víctimas."
+      date="9 de abril de 2024"
     >
       <slot>
-        <ol>
-          <li>Performance al ingreso (sensibilización)</li>
-          <li>Taller en el aula (conceptualizacion, cifras, casos)</li>
-          <li>Producto: cartel</li>
-        </ol>
+        El Liceo Integrado abraza, se solidariza y rinde homenaje a las víctimas
+        del conflicto armado en Colombia mediante un espacio reflexivo y
+        pedagógico, y la siembra de un árbol como símbolo de vida y paz que
+        represente el inicio de un nuevo país.
       </slot>
     </MemoryAct>
+    <ImageGallery images={images} />
   </slot>
 </Root>

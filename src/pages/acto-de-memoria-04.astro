@@ -1,21 +1,48 @@
 ---
 import Root from "../layouts/Root.astro";
 import MemoryAct from "../components/MemoryAct.astro";
+import ImageGallery from "../components/ImageGallery.astro";
+import image_01 from "../img/acto-de-memoria-04-01.jpg";
+import image_02 from "../img/acto-de-memoria-04-02.jpg";
+import image_03 from "../img/acto-de-memoria-04-03.jpg";
+import image_04 from "../img/acto-de-memoria-04-04.jpg";
+import image_05 from "../img/acto-de-memoria-04-05.jpg";
+import image_06 from "../img/acto-de-memoria-04-06.jpg";
+import image_07 from "../img/acto-de-memoria-04-07.jpg";
+import image_08 from "../img/acto-de-memoria-04-08.jpg";
+import image_09 from "../img/acto-de-memoria-04-09.jpg";
+import image_10 from "../img/acto-de-memoria-04-10.jpg";
+const images = [
+  image_01,
+  image_02,
+  image_03,
+  image_04,
+  image_05,
+  image_06,
+  image_07,
+  image_08,
+  image_09,
+  image_10,
+];
 ---
 
-<Root title="Acto de memoria 01">
+<Root title="Acto de memoria 04">
   <slot>
     <MemoryAct
-      actName="Acto de memoria en conmemoración a las víctimas de desaparición forzada en Colombia."
-      date="8 de Junio de 2018"
+      actName="El Liceo Integrado de Zipaquirá abraza la verdad:  Una invitación para celebrar y reflexionar  acerca del legado de la comisión de la verdad ."
+      date="12 de Agosto de 05 2022"
     >
       <slot>
         <ol>
-          <li>Performance al ingreso (sensibilización)</li>
-          <li>Taller en el aula (conceptualizacion, cifras, casos)</li>
-          <li>Producto: cartel</li>
+          <li>Acción pedagógica en el aula</li>
+          <li>Visualización de los productos elaborados por los estudiantes</li>
+          <li>Movilización en las redes sociales</li>
+          <li>
+            Actividad artística: elaboración de mensajes alusivos a la actividad
+          </li>
         </ol>
       </slot>
     </MemoryAct>
+    <ImageGallery images={images} />
   </slot>
 </Root>

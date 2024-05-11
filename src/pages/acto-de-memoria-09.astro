@@ -1,21 +1,42 @@
 ---
 import Root from "../layouts/Root.astro";
 import MemoryAct from "../components/MemoryAct.astro";
+import ImageGallery from "../components/ImageGallery.astro";
+import image_01 from "../img/acto-de-memoria-09-01.jpg";
+import image_02 from "../img/acto-de-memoria-09-02.jpg";
+import image_03 from "../img/acto-de-memoria-09-03.jpg";
+import image_04 from "../img/acto-de-memoria-09-04.jpg";
+
+const images = [image_01, image_02, image_03, image_04];
 ---
 
-<Root title="Acto de memoria 01">
+<Root title="Acto de memoria 09">
   <slot>
     <MemoryAct
-      actName="Acto de memoria en conmemoración a las víctimas de desaparición forzada en Colombia."
-      date="8 de Junio de 2018"
+      actName="Actos de memoria en el marco de la semana por la paz."
+      date="26 octubre de 2023"
     >
       <slot>
         <ol>
-          <li>Performance al ingreso (sensibilización)</li>
-          <li>Taller en el aula (conceptualizacion, cifras, casos)</li>
-          <li>Producto: cartel</li>
+          <li>Acto reflexivo y pedagógico en el aula con Podcast.</li>
+          <li>
+            Conversatorio con Yuri Neira: "No se muere quien se va, sólo muere
+            quien se olvida". Acto de memoria del joven estudiante Nicolás
+            Neira. Invitado especial: Yuri Enrique Neira.
+          </li>
+          <li>
+            Performance en torno a la violación de los derechos humanos en
+            Colombia.
+          </li>
+          <li>
+            Acto Inaugural "Árbol de la Memoria": Inauguración del árbol de
+            memoria, porque es un deber visibilizar, denunciar y mantener viva
+            la memoria de las víctimas. ¡Por nuestras víctimas, ni un minuto de
+            silencio, toda una vida de lucha!
+          </li>
         </ol>
       </slot>
     </MemoryAct>
+    <ImageGallery images={images} />
   </slot>
 </Root>

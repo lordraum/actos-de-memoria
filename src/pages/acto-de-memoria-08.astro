@@ -1,21 +1,27 @@
 ---
 import Root from "../layouts/Root.astro";
 import MemoryAct from "../components/MemoryAct.astro";
+import ImageGallery from "../components/ImageGallery.astro";
 ---
 
-<Root title="Acto de memoria 01">
+<Root title="Acto de memoria 08">
   <slot>
-    <MemoryAct
-      actName="Acto de memoria en conmemoración a las víctimas de desaparición forzada en Colombia."
-      date="8 de Junio de 2018"
-    >
+    <MemoryAct actName="Podcast Desarmados" date="Octubre de 2023">
       <slot>
-        <ol>
-          <li>Performance al ingreso (sensibilización)</li>
-          <li>Taller en el aula (conceptualizacion, cifras, casos)</li>
-          <li>Producto: cartel</li>
-        </ol>
+        <p>
+          Utilizar el formato del podcast como herramienta tecnológica y
+          auditiva para hacer memoria a partir de historias de vida de víctimas
+          del conflicto armado en Colombia. Este enfoque tiene como propósito
+          principal prevenir la repetición de la violencia, aprender de las
+          experiencias vividas y contribuir a la construcción de una cultura de
+          paz que deje una huella significativa en la historia del país.
+        </p>
+        <p>
+          Trabajo colaborativo (inglés, español, tecnología e Investigación
+          Social) con estudiantes de Humanidades 1004.
+        </p>
       </slot>
     </MemoryAct>
+    <ImageGallery />
   </slot>
 </Root>
